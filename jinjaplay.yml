@@ -1,10 +1,14 @@
 ---
   -
-    name: Add sum of two numbers
+    name: Perform Arthimetic Operations
     hosts: all
     become: true
+    gather_facts: false
     vars: 
-        int_var: 4
+        num1: 4
+        num2: 5
     tasks:
-        - debug:
-               msg: "Ansible arithmetic opeartions using variable{{ int_var + 5}}" 
+        - name: "Calculations"    
+          debug:
+             msg:
+              - "Add num1 and num2: {{ num1+num2 }}"
