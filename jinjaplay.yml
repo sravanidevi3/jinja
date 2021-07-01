@@ -3,7 +3,8 @@
     name: Add sum of two numbers
     hosts: all
     become: true
+    vars: 
+        int_var: 4
     tasks:
         - debug:
-               msg: "addition{{ 4 +3 }}"
-          ignore_errors: true    
+               msg: "Ansible arithmetic opeartions using variable{{ int_var + 5}}" 
