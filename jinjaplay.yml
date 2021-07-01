@@ -5,4 +5,4 @@
     become: true
     tasks:
         - debug:
-               msg: "Addition {{ 4 + 5 }} "
+               msg: "{{ [4,5] | Addition }}"
