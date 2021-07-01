@@ -1,0 +1,8 @@
+---
+  -
+    name: Add sum of two numbers
+    hosts: all
+    become: true
+    tasks:
+        -debug:
+             msg "Addition {{ 4 + 5 }} "
